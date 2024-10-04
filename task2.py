@@ -3,7 +3,7 @@ import random
 
 text_file = 'task.txt'
 skill = 0
-ingredients = []
+ingredients = 0
 
 def load(skill, ingredients):
     try:
@@ -13,7 +13,7 @@ def load(skill, ingredients):
             ingredients = int(file_data[1])
         return skill, ingredients
     except FileNotFoundError:
-        return 0, ["None yet"]
+        return 0, 0
 
 def save_data(skill, ingredients):
     with open(text_file, "w") as file:
